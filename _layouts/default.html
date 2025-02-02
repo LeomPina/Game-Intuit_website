@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 | default: 'en' }}">
+  <title>Game-Intuit</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    #main-content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero{
+          width: 100%;
+          height: 100vh;
+          position: relative;
+          padding: 0 5%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+
+    .content{
+        text-align: center;
+    }
+
+    .content h1{
+        font-size: 160px;
+        color: #fff;
+        font-weight: 600;
+        transition: 0.5s;
+    }
+
+    .content h1:hover{
+      -webkit-text-stroke: 2px #fff;  
+      color: transparent;
+    }
+
+    .content a{
+        text-decoration: none;
+        display: inline-block;
+        color: #222;
+        font-size: 24px;
+        border: 2px solid #fff;
+        padding: 14px 70px;
+        border-radius: 50px;
+        margin-top: 20px;
+    }
+
+    .back-video{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    @media(min-aspect-ratio: 16/9){
+          .back-video{
+            width: 100%;
+            height: auto;
+          }
+        }
+  
+    @media(max-aspect-ratio: 16/9){
+      .back-video{
+        width: auto;
+        height: 100%;
+      }
+    }
+
+    nav{
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 20px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav .logo{
+      width: 80px;
+    }
+
+    nav ul li{
+      list-style: none;
+      display: inline-block;
+      margin-left: 40px;
+    }
+
+    nav ul li a{
+      text-decoration: none;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1em;
+      transition: all .6s ease;
+    }
+
+    nav ul li a:hover{
+        color: var(--main-color);
+    }
+
+    footer {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0); /* Semi-transparent black background */
+      color: white;
+      text-align: center;
+      padding: 20px 8%;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      bottom: 0;
+      left: 0;
+      font-size: 16px;
+      margin-top: auto;
+      z-index: 10;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: transparent;
+    }
+
+    .footer-icons {
+      display: flex;
+      gap: 20px; /* Space between icons */
+      margin-bottom: 10px;
+    }
+
+    .footer-icons a {
+      color: #fff; /* Teal color for icons */
+      text-decoration: none;
+      font-size: 24px;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .footer-icons a:hover {
+      color: #fff; /* White on hover */
+      transform: scale(1.2); /* Slight zoom on hover */
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+      color: #aaa; /* Slightly lighter text */
+    }
+
+  </style>
+  <body>
+    
+    <div class="wrapper">
+
+      <div class="hero">
+        <video autoplay loop muted playsinline preload="auto" class="back-video">
+          
+          <source src="assets/images/158633-817153726_small.mp4" type="video/mp4">
+          <!-- Fallback text -->
+          Your browser does not support the video tag.
+        </video> 
+        <nav>
+          <a href="/"><img src="/assets/images/logo.webp" class="logo" alt="Game-Intuit Logo"></a>
+          <ul>
+            <li><a href = "/About_us/">About us</a></li>
+            <li><a href = "/Tech/">Tech</a></li>
+            <li><a href = "/News/">News</a></li>
+            <li><a href = "/Contacts/">Contacts</a></li>
+          </ul>
+
+        </nav>
+               
+        <div class="content">
+          <h1>Game-Intuit</h1>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-dev"></i></a>
+            <a href="#"><i class="fas fa-pencil-alt"></i></a>
+          </div>
+          <p>&copy; 2025 Game-Intuit Web Development</p>
+        </div>
+      </footer>  
+    </div>
+    {% include scripts.html %}
+  </body>
+</html>

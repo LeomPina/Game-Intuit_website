@@ -1,0 +1,14 @@
+# main links
+main:
+  - title: "About us"
+    url: /#section-1 #add another link
+    blank: False
+  - title: "Tech"
+    url: /#section-2
+    blank: false
+  - title: "News"
+    url: /#section-3
+    blank: false
+  - title: "Contacts"
+    url: /#section-4
+    blank: false

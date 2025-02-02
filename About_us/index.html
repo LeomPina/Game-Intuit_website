@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 | default: 'en' }}">
+  <title>Game-Intuit_about_us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      background-color: #222;
+    }
+
+    .wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero{
+          width: 100%;
+          height: 100vh;
+          position: relative;
+          padding: 0 5%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+
+    nav{
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 20px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav .logo{
+      width: 80px;
+    }
+
+    nav ul li{
+      list-style: none;
+      display: inline-block;
+      margin-left: 40px;
+    }
+
+    nav ul li a{
+      text-decoration: none;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1em;
+      transition: all .6s ease;
+    }
+
+    nav ul li a:hover{
+        color: #088F8F;
+    }
+
+    footer {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0); /* Semi-transparent black background */
+      color: #222;
+      text-align: center;
+      padding: 20px 8%;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      bottom: 0;
+      left: 0;
+      font-size: 16px;
+      margin-top: auto;
+      z-index: 10;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: transparent;
+    }
+
+    .footer-icons {
+      display: flex;
+      gap: 20px; /* Space between icons */
+      margin-bottom: 10px;
+    }
+
+    .footer-icons a {
+      color: #fff; /* Teal color for icons */
+      text-decoration: none;
+      font-size: 24px;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .footer-icons a:hover {
+      color: #fff; /* White on hover */
+      transform: scale(1.2); /* Slight zoom on hover */
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+      color: #aaa; /* Slightly lighter text */
+    }
+
+    .about{
+        width: 100%;
+        padding: 78px 0px;
+        background-color: #222;
+    }
+
+    .about-text{
+        width: 550px;
+
+    }
+
+    .about img{
+        height: auto;
+        width: 500px;
+    }
+
+    .main{
+        width: 1130px;
+        max-width: 95%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .about-text h1{
+        color: white;
+        font-size: 80px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+
+    .about-text p{
+        color: white;
+        letter-spacing: 1px;
+        line-height: 28px;
+        font-size: 18px;
+        margin-bottom: 45px;
+    }
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+    }
+
+    .slides{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        color: #fff;
+        scroll-snap-align: start;
+        
+    }
+
+    .slide1{
+        background: linear-gradient(454deg, #222, #222);
+    }
+
+    .slide2{
+        background: linear-gradient(454deg, #222222, #222222);
+    }
+
+  </style>
+  <body>
+      <div class="container"> 
+        
+            <nav>
+            <a href="/"><img src="/assets/images/logo.webp" class="logo" alt="Game-Intuit Logo"></a>
+            <ul>
+                <li><a href = "/About_us/">About us</a></li>
+                <li><a href = "/Tech/">Tech</a></li>
+                <li><a href = "/News/">News</a></li>
+                <li><a href = "/Contacts/">Contacts</a></li>
+            </ul>
+
+            </nav>
+                    
+            
+        
+            <div class="slides slide1">    
+                <section class="about">
+                    <div class="main">
+                        <img src="about_us_pic.png">
+                        <div class="about-text">
+                            <h1>About Us</h1>
+                            <p>Game-Intuit is a Loughborough University Intellectual Property incubator featuring original AI sports analytics technology that helps athletes and teams analyse data and use AI models to optimise on-field performance. Our mission is to unlock the secrets behind winning for our customers through our state-of-the-art AI solutions.
+
+                                Our products can be used either as a complement to existing competitive products, providing deeper AI technology support, or as standalone solutions for sports organisations looking to improve further. Our focus on AI decision analytics models bridges the gap between traditional sports analytics tools and enables seamless integration or full replacement depending on customer needs.
+                                
+                                Our products serve the target market of professional sports and meet the needs of a wide range of customers: professional teams seeking a competitive edge, sports associations aiming to keep up with modern technology, coaches and trainers eager to optimise the effectiveness of their training and athletes looking to improve their individual performance.</p>
+                        </div>
+                    </div>    
+                </section>
+            </div>  
+            <div class="slides slide2">    
+                
+            </div> 
+        
+        <footer>
+            <div class="footer-container">
+            <div class="footer-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-dev"></i></a>
+                <a href="#"><i class="fas fa-pencil-alt"></i></a>
+            </div>
+            <p>&copy; 2025 Game-Intuit Web Development</p>
+            </div>
+        </footer>  
+        
+      </div>    
+  </body>
+</html>
