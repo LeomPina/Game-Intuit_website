@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 | default: 'en' }}">
+  <title>Game-Intuit_about_us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      background-color: #222;
+    }
+
+    .wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero{
+          width: 100%;
+          height: 100vh;
+          position: relative;
+          padding: 0 5%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+
+    nav{
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 20px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-container {
+      display: flex;  /* Aligns items horizontally */
+      align-items: center; /* Ensures vertical alignment */
+      gap: 10px; /* Adjust the spacing between logos */
+    }
+
+    nav .logo{
+      width: 80px;
+    }
+
+    nav .uni_logo{
+      width: 160px;
+    }
+
+    .logo-divider {
+      width: 2px; /* Thickness of the bar */
+      height: 45px; /* Adjust height as needed */
+      background-color: black; /* Black color */
+      margin: 0 10px 0 -2px;
+    }
+
+    nav ul li{
+      list-style: none;
+      display: inline-block;
+      margin-left: 40px;
+    }
+
+    nav ul li a{
+      text-decoration: none;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1em;
+      transition: all .6s ease;
+    }
+
+    nav ul li a:hover{
+        color: #088F8F;
+    }
+
+    footer {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0); /* Semi-transparent black background */
+      color: #222;
+      text-align: center;
+      padding: 20px 8%;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      bottom: 0;
+      left: 0;
+      font-size: 16px;
+      margin-top: auto;
+      z-index: 10;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: transparent;
+    }
+
+    .footer-icons {
+      display: flex;
+      gap: 20px; /* Space between icons */
+      margin-bottom: 10px;
+    }
+
+    .footer-icons a {
+      color: #fff; /* Teal color for icons */
+      text-decoration: none;
+      font-size: 24px;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .footer-icons a:hover {
+      color: #fff; /* White on hover */
+      transform: scale(1.2); /* Slight zoom on hover */
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+      color: #aaa; /* Slightly lighter text */
+    }
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+    }
+
+    .content{
+        width: 80%;
+        margin: 100px auto 50px auto;
+        padding: 78px 0px;
+    }
+
+    .content h1{
+        color: white;
+        font-size: 35px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+
+    .content p{
+        color: white;
+        letter-spacing: 1px;
+        line-height: 28px;
+        font-size: 18px;
+        margin-bottom: 45px;
+    }
+
+    .contact-box{
+        background: #fff;
+        display: flex;
+    }
+
+    .contact-left{
+        flex-basis: 60%;
+        padding: 40px 60px;
+    }
+
+    .contact-right{
+        flex-basis: 40%;
+        padding: 40px;
+        background: #008080;
+        color: #fff;
+    }
+
+    .input-row{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .input-row .input-group{
+        flex-basis: 45%;
+    }
+
+    input{
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        outline: none;
+        padding-bottom: 5px;
+    }
+
+    textarea{
+        width: 100%;
+        border: 1px solid #ccc;
+        outline: none;
+        padding: 10px;
+    }
+
+    label{
+        margin-bottom: 6px;
+        display: block;
+        color: #008080;
+    }
+
+    button{
+        background: #008080;
+        width: 100px;
+        border: none;
+        outline: none;
+        color: #fff;
+        height: 35px;
+        border-radius: 30px;
+        margin-top: 20px;
+        box-shadow: 0px 5px 15px 0px rgb(0, 128, 128, 0.3);
+    }
+
+    .contact-left h3{
+        color: #008080;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    .contact-right h3{
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    tr td:first-child{
+        padding-right: 20px;
+    }
+
+    tr td{
+        padding-top: 20px;
+    }
+
+  </style>
+  <body>
+      <div class="container"> 
+        
+            <nav>
+              <div class="logo-container">
+                <a href="/"><img src="/assets/images/logo_1.png" class="logo" alt="Game-Intuit Logo"></a>
+                <div class="logo-divider"></div>
+                <a href="https://www.lboro.ac.uk/"><img src="/assets/images/Loughborough-Univeristy-Lboro-Logo.png" class="uni_logo" alt="Uni Logo"></a>
+              </div>
+            <ul>
+                <li><a href = "/About_us/">About us</a></li>
+                <li><a href = "/Tech/">Tech</a></li>
+                <li><a href = "/News/">News</a></li>
+                <li><a href = "/Contact_us/">Contact us</a></li>
+            </ul>
+
+            </nav>
+                    
+        <div class="content">    
+            <h1>Connect With Us</h1>
+            <p>You can contact us by writing to us at the email address below.</p>
+            <div class="contact-box">
+                <div class="contact-left">
+                    <h3>Send your request</h3>
+                    <form accept-charset="UTF-8" action="https://formkeep.com/f/exampletoken" method="POST">
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Name</label>
+                                <input type="text">
+                            </div>
+                            <div class="input-group">
+                                <label>Phone</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Email</label>
+                                <input type="email">
+                            </div>
+                            <div class="input-group">
+                                <label>Subject</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <label>Message</label>
+                        <textarea rows="5" placeholder="Your Message"></textarea>
+                        <button type="submit">SEND</button>
+                    </form>    
+                </div>
+                
+                <div class="contact-right">
+                    <h3>Reach Us</h3>
+                    <table>
+                        <tr>
+                            <td>Email</td>
+                            <td>Aaron@gameintuit.com</td>
+                        </tr>
+                        <tr>
+                            <td>Phone</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+            
+        <footer>
+            <div class="footer-container">
+            <div class="footer-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2025 Game-Intuit Web Development</p>
+            </div>
+        </footer>  
+        
+      </div>    
+  </body>
+</html>

@@ -49,8 +49,25 @@
       justify-content: space-between;
     }
 
+    .logo-container {
+      display: flex;  /* Aligns items horizontally */
+      align-items: center; /* Ensures vertical alignment */
+      gap: 10px; /* Adjust the spacing between logos */
+    }
+
     nav .logo{
       width: 80px;
+    }
+
+    nav .uni_logo{
+      width: 160px;
+    }
+
+    .logo-divider {
+      width: 2px; /* Thickness of the bar */
+      height: 45px; /* Adjust height as needed */
+      background-color: black; /* Black color */
+      margin: 0 10px 0 -2px;
     }
 
     nav ul li{
@@ -185,6 +202,102 @@
 
     .slide2{
         background: linear-gradient(454deg, #222222, #222222);
+        display: flex;
+        flex-direction: column; /* Ensures vertical stacking */
+        align-items: center; /* Centers content horizontally */
+        justify-content: center; /* Centers content vertically */
+        padding: 50px 0; /* Adds spacing */
+    }
+
+    .heading{
+      font-size: 60px;
+      color: white;
+    }
+
+    .heading span{
+      font-style: italic;
+      font-size: 30px;
+    }
+
+    .profiles {
+        display: flex;
+        justify-content: space-around; /* Centers the profiles */
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        margin: 20px 80px;
+    }
+
+    .profile{
+      flex-basis: 260px;
+    }
+
+    .profile .profile-img{
+      height: 260px;
+      width: 260px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    }
+
+    .profile:hover .profile-img {
+        transform: scale(1.1); /* Slight zoom effect */
+    }
+
+    .user-name{
+      margin-top: 30px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .profile h5{
+      font-size: 20px;
+      font-weight: 100;
+      letter-spacing: 3px;
+      color: #ccc;
+      text-align: center;
+    }
+
+    .profile p{
+      font-size: 18px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: 1150px){
+      .profiles{
+        flex-direction: column;
+      }
+
+      .profile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profile p{
+        text-align: center;
+        margin: 20px 60px 80px 60px;
+        font-size: 20px;
+      }
+    }
+
+    @media only screen and (max-width: 900px){
+      .heading {
+        font-size: 40px;
+        color: white;
+        text-align: center;
+      }
+
+      .heading span{
+        font-size: 15px;
+      }
+
+      .profiles{
+        margin: 20px 0;
+      }
+
+      .profile p{
+        margin: 20px 10px 80px 10px;
+      }
     }
 
   </style>
@@ -192,12 +305,16 @@
       <div class="container"> 
         
             <nav>
-            <a href="/"><img src="/assets/images/logo.webp" class="logo" alt="Game-Intuit Logo"></a>
+              <div class="logo-container">
+                <a href="/"><img src="/assets/images/logo_1.png" class="logo" alt="Game-Intuit Logo"></a>
+                <div class="logo-divider"></div>
+                <a href="https://www.lboro.ac.uk/"><img src="/assets/images/Loughborough-Univeristy-Lboro-Logo.png" class="uni_logo" alt="Uni Logo"></a>
+              </div>
             <ul>
                 <li><a href = "/About_us/">About us</a></li>
                 <li><a href = "/Tech/">Tech</a></li>
                 <li><a href = "/News/">News</a></li>
-                <li><a href = "/Contacts/">Contacts</a></li>
+                <li><a href = "/Contact_us/">Contact us</a></li>
             </ul>
 
             </nav>
@@ -220,7 +337,63 @@
                 </section>
             </div>  
             <div class="slides slide2">    
-                
+                <h1 class="heading">Meet Our Team</h1>
+                  <div class="profiles">
+                    <div class="profile">
+                      <img src="/assets/images/Varuna_pic.jpeg" class="profile-img">
+
+                      <h3 class="user-name">Dr Chaoyi Gu</h3>
+                      <h5>CEO</h5>
+                      <p>
+                        Dr Chaoyi Gu is one of the leading experts in football analytics. He received his PhD from Loughborough University, specialising in sports analytics and machine learning.
+                        
+                        His research has been published in top journals and conferences in Artificial Intelligence and sports, including Knowledge-Based Systems and Sloan Sports Analytics Conference.</p>
+                    </div>
+
+                    <div class="profile">
+                      <img src="/assets/images/Varuna_pic.jpeg" class="profile-img">
+
+                      <h3 class="user-name">Jiaming Na</h3>
+                      <h5>CTO</h5>
+                      <p>
+                        Jiaming Na specialises in computer vision model development and optimisation.
+                        
+                        He joined Loughborough University London after receiving his BSc and MSc in Statistics from Imperial College London. During his PhD, he developed several AI frameworks to advance football performance analysis.</p>
+                    </div>
+
+                    <div class="profile">
+                      <img src="/assets/images/Varuna_pic.jpeg" class="profile-img">
+
+                      <h3 class="user-name">Dr Varuna De Silva</h3>
+                      <h5>CSO</h5>
+                      <p>
+                        One of the UK's foremost experts on artificial intelligence, he currently leads the Machine Intelligence Lab at Loughborough University.
+                        
+                        He is an Associate Editor of IEEE Access, a Fellow of the Higher Education Academy in the UK, and a member of the BCS and IET. He also serves as Head of Research for Artificial Intelligence and Digital Technologies at the UK Parliament.</p>
+                    </div>
+
+                    <div class="profile">
+                      <img src="/assets/images/Varuna_pic.jpeg" class="profile-img">
+
+                      <h3 class="user-name">Leonardo Pina</h3>
+                      <h5>Software Engineer</h5>
+                      <p>
+                        Jiaming Na specialises in computer vision model development and optimisation.
+                        
+                        He joined Loughborough University London after receiving his BSc and MSc in Statistics from Imperial College London. During his PhD, he developed several AI frameworks to advance football performance analysis.</p>
+                    </div>
+
+                    <div class="profile">
+                      <img src="/assets/images/Varuna_pic.jpeg" class="profile-img">
+
+                      <h3 class="user-name">Dr Rafael Pina</h3>
+                      <h5>AI Scientist</h5>
+                      <p>
+                        Jiaming Na specialises in computer vision model development and optimisation.
+                        
+                        He joined Loughborough University London after receiving his BSc and MSc in Statistics from Imperial College London. During his PhD, he developed several AI frameworks to advance football performance analysis.</p>
+                    </div>
+                </div>
             </div> 
         
         <footer>
@@ -230,9 +403,6 @@
                 <a href="#"><i class="fas fa-envelope"></i></a>
                 <a href="#"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-dev"></i></a>
-                <a href="#"><i class="fas fa-pencil-alt"></i></a>
             </div>
             <p>&copy; 2025 Game-Intuit Web Development</p>
             </div>
