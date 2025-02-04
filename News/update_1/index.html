@@ -173,43 +173,84 @@
         margin-bottom: 45px;
     }
 
-    
-    .post {
-      width: 60%;
-      margin: 20px 0;
-
-      border-top: 1px solid #333;
-      padding: 20px 0;
-      text-align: left;
-    }
-    .post:last-child {
-      border-bottom: 1px solid #333;
-    }
-    .post-title {
-      font-size: 1.7rem;
-      color: #00aaff;
-      text-decoration: none;
-    }
-    .post-title:hover {
-      text-decoration: underline;
-    }
-    .post-meta {
-      font-size: 1.0rem;
-      color: #888;
-      margin: 5px 0;
-    }
-    .post-tags {
+    #blog{
       display: flex;
+      justify-content: center;
       align-items: center;
-      margin-top: 10px;
+      flex-direction: column;
+      padding: 40px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
-    .post-tags span {
-      font-size: 1.0rem;
-      color: #00aaff;
-      margin-left: 5px;
+
+    .blog-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0px;
+      flex-wrap: wrap;
     }
-    .post-tags i{
-      color: #888;
+
+    .blog-box{
+      width: 350px;
+      background-color: #ffffff;
+      border: 2px solid #222;
+      margin: 20px;
+    }
+
+    .blog-img{
+      width: 100%;
+      height: auto;
+    }
+
+    .blog-img img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .blog-text{
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-text span{
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    .blog-text .blog-title{
+      margin: 10px 0;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #272727;
+    }
+
+    .blog-text .blog-title:hover{
+      color: #088F8F;
+      transition: all ease 0.3s;
+    }
+
+    .blog-text p{
+      color: #9b9b9b;
+      font-size: 0.9rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 20px 0px;
+    }
+
+    .blog-text a{
+      color: #222;
+    }
+
+    .blog-text a:hover{
+      color: #088F8F;
+      transition: all ease 0.3s;
     }
 
   </style>
@@ -235,24 +276,43 @@
 
             </nav>
         <div class="content">
-                   
+          <div class="blog">           
             <h1>Latest Updates</h1>
             <p>Check out what we have been up to</p>
-            
-            <!-- Blog Posts Container -->
-            
-              
-              <div class="post">
-                <a href="/News/update_1/" class="post-title">First company announcement</a>
-                <div class="post-meta">· February 28, 2022</div>
-                  <div class="post-tags">
-                      <i class="fas fa-calendar"> 2025</i>
-                  </div>
-                </div>
+          </div> 
+
+          <div class="blog-container">
+            <div class="blog-box">
+
+              <div class="blog-img">
+                <img src="/News/update_1/football_update1.jpg" alt="Blog">
               </div>
 
+              <div class="blog-text">
+                <span>4 February 2025 / Football analytics</span>
+                <a href="#" class="blog-title">How football players can perform better on the pitch</a>
+                <p>wae fwaefjkgh wfea eghkf ewhg gshadfh sdjfhsjgj  ajs a jjdja sd asd fssf sdf a ewew q asdasd h asdasd, ww werrrw e qrttrt</p>
+                <a href="#">Read More</a>
+              </div>
 
-            
+            </div>
+
+            <div class="blog-box">
+
+                <div class="blog-img">
+                  <img src="/News/update_1/football_update1.jpg" alt="Blog">
+                </div>
+  
+                <div class="blog-text">
+                  <span>8 February 2025 / Football analytics</span>
+                  <a href="#" class="blog-title">How football players can perform better on the pitch</a>
+                  <p>wae fwaefjkgh wfea eghkf ewhg gshadfh sdjfhsjgj  ajs a jjdja sd asd fssf sdf a ewew q asdasd h asdasd, ww werrrw e qrttrt</p>
+                  <a href="#">Read More</a>
+                </div>
+  
+              </div>
+
+          </div>
         </div>  
             
         <footer>
