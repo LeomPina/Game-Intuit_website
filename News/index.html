@@ -7,9 +7,10 @@
     html, body {
       height: 100%;
       margin: 0;
-      overflow: hidden;
+      overflow-y: auto;
       display: flex;
       flex-direction: column;
+      background-color: #222;
     }
 
     .wrapper {
@@ -19,10 +20,6 @@
       height: 100%;
     }
 
-    #main-content {
-      flex: 1;
-      padding: 20px;
-    }
 
     *{
       margin: 0;
@@ -40,61 +37,6 @@
           align-items: center;
           justify-content: center;
       }
-
-    .content {
-    text-align: center;
-    }
-
-    .content h1, .content h2 {
-        font-size: 160px;
-        color: #fff;
-        font-weight: 600;
-        transition: 0.5s;
-    }
-
-    /* Slogan styling */
-    .content h2 {
-        font-size: 40px; /* Smaller than main heading */
-    }
-
-    /* Apply hover effect to both h1 and h2 when .content is hovered */
-    .content:hover h1, .content:hover h2 {
-        -webkit-text-stroke: 2px #fff;
-        color: transparent;
-    }
-
-    .content a{
-        text-decoration: none;
-        display: inline-block;
-        color: #222;
-        font-size: 24px;
-        border: 2px solid #fff;
-        padding: 14px 70px;
-        border-radius: 50px;
-        margin-top: 20px;
-    }
-
-    .back-video{
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-      object-fit: cover;
-    }
-
-    @media(min-aspect-ratio: 16/9){
-          .back-video{
-            width: 100%;
-            height: auto;
-          }
-        }
-  
-    @media(max-aspect-ratio: 16/9){
-      .back-video{
-        width: auto;
-        height: 100%;
-      }
-    }
 
     nav{
       width: 100%;
@@ -144,13 +86,13 @@
     }
 
     nav ul li a:hover{
-        color: var(--main-color);
+        color: #088F8F;
     }
 
     footer {
       width: 100%;
       background-color: rgba(0, 0, 0, 0); /* Semi-transparent black background */
-      color: white;
+      color: #222;
       text-align: center;
       padding: 20px 8%;
       position: absolute;
@@ -195,54 +137,74 @@
       color: #aaa; /* Slightly lighter text */
     }
 
+    .container{
+        width: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+    }
+
+    .content{
+        width: 80%;
+        margin: 100px auto 50px auto;
+        padding: 78px 0px;
+    }
+
+    .content h1{
+        color: white;
+        font-size: 35px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+
+    .content p{
+        color: white;
+        letter-spacing: 1px;
+        line-height: 28px;
+        font-size: 18px;
+        margin-bottom: 45px;
+    }
+
   </style>
   <head>
     <!-- Favicon -->
     <link rel="icon" href="/assets/images/logo_1.png" type="image/png">
   </head>
   <body>
-    
-    <div class="wrapper">
+      <div class="container"> 
+        
+            <nav>
+              <div class="logo-container">
+                <a href="/"><img src="/assets/images/logo_1.png" class="logo" alt="Game-Intuit Logo"></a>
+                <div class="logo-divider"></div>
+                <a href="https://www.lboro.ac.uk/"><img src="/assets/images/Loughborough-Univeristy-Lboro-Logo.png" class="uni_logo" alt="Uni Logo"></a>
+              </div>
+            <ul>
+                <li><a href = "/About_us/">About us</a></li>
+                <li><a href = "/Tech/">Tech</a></li>
+                <li><a href = "/News/">News</a></li>
+                <li><a href = "/Contact_us/">Contact us</a></li>
+            </ul>
 
-      <div class="hero">
-        <video autoplay loop muted playsinline preload="auto" class="back-video">
-          
-          <source src="assets/images/158633-817153726_small.mp4" type="video/mp4">
-          <!-- Fallback text -->
-          Your browser does not support the video tag.
-        </video> 
-        <nav>
-          <div class="logo-container">
-            <a href="/"><img src="/assets/images/logo_1.png" class="logo" alt="Game-Intuit Logo"></a>
-            <div class="logo-divider"></div>
-            <a href="https://www.lboro.ac.uk/"><img src="/assets/images/Loughborough-Univeristy-Lboro-Logo.png" class="uni_logo" alt="Uni Logo"></a>
-          </div>
-          <ul>
-            <li><a href = "/About_us/">About us</a></li>
-            <li><a href = "/Tech/">Tech</a></li>
-            <li><a href = "/News/">News</a></li>
-            <li><a href = "/Contact_us/">Contact us</a></li>
-          </ul>
+            </nav>
+                    
+        <div class="content">    
+            
 
-        </nav>
-               
-        <div class="content">
-          <h1>Game-Intuit</h1>
-          <h2>Unlock the Secret Behind Winning</h2>
         </div>
-      </div>
-      <footer>
-        <div class="footer-container">
-          <div class="footer-icons">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fas fa-envelope"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-          </div>
-          <p>&copy; 2025 Game-Intuit Web Development</p>
-        </div>
-      </footer>  
-    </div>
-    {% include scripts.html %}
+            
+        <footer>
+            <div class="footer-container">
+            <div class="footer-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2025 Game-Intuit Web Development</p>
+            </div>
+        </footer>  
+        
+      </div>    
   </body>
 </html>
