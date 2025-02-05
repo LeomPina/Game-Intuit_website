@@ -56,18 +56,18 @@
     }
 
     nav .logo{
-      width: 80px;
+      width: 47px;
     }
 
     nav .uni_logo{
-      width: 160px;
+      width: 200px;
     }
 
     .logo-divider {
       width: 2px; /* Thickness of the bar */
       height: 45px; /* Adjust height as needed */
-      background-color: black; /* Black color */
-      margin: 0 10px 0 -2px;
+      background-color: #E5E4E2; /* Black color */
+      margin: 0 10px 0 4px;
     }
 
     nav ul li{
@@ -198,33 +198,36 @@
       color: #888;
       margin: 5px 0;
     }
-    .post-tags {
+    .post-text{
       display: flex;
-      align-items: center;
-      margin-top: 10px;
+      flex-direction: column;
+      margin-right: 35%;
     }
-    .post-tags span {
+
+    .post-text p{
+      color: #9b9b9b;
       font-size: 1.0rem;
-      color: #00aaff;
-      margin-left: 5px;
-    }
-    .post-tags i{
-      color: #888;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 10px 0px;
     }
 
   </style>
   <head>
     <!-- Favicon -->
-    <link rel="icon" href="/assets/images/logo_1.png" type="image/png">
+    <link rel="icon" href="/assets/images/logo_1_noTransp.png" type="image/png">
   </head>
   <body>
       <div class="container"> 
         
             <nav>
               <div class="logo-container">
-                <a href="/"><img src="/assets/images/logo_1.png" class="logo" alt="Game-Intuit Logo"></a>
+                <a href="/"><img src="/assets/images/logo_1_noTransp.png" class="logo" alt="Game-Intuit Logo"></a>
                 <div class="logo-divider"></div>
-                <a href="https://www.lboro.ac.uk/"><img src="/assets/images/Loughborough-Univeristy-Lboro-Logo.png" class="uni_logo" alt="Uni Logo"></a>
+                <a href="https://www.lboro.ac.uk/"><img src="/assets/images/loughborough-logo-black.png" class="uni_logo" alt="Uni Logo"></a>
               </div>
             <ul>
                 <li><a href = "/About_us/">About us</a></li>
@@ -244,11 +247,10 @@
               
               <div class="post">
                 <a href="/News/update_1/" class="post-title">First company announcement</a>
-                <div class="post-meta">· February 28, 2022</div>
-                  <div class="post-tags">
-                      <i class="fas fa-calendar"> 2025</i>
-                  </div>
+                <div class="post-text">
+                  <p>wae fwaefjkgh wfea eghkf ewhg gshadfh sdjfhsjgj  ajs a jjdja sd asd fssf sdf a ewew q asdasd h asdasd, ww werrrw e qrttrt hjh s sdfhsdf s huieriuf r er erf</p>
                 </div>
+                <div class="post-meta">· February 28, 2022</div>
               </div>
 
 
@@ -260,7 +262,6 @@
             <div class="footer-icons">
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
             <p>&copy; 2025 Game-Intuit Web Development</p>
