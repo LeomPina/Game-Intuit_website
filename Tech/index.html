@@ -70,6 +70,19 @@
       margin: 0 10px 0 4px;
     }
 
+    nav ul {
+        display: flex;
+        align-items: center;
+        gap: 0px; /* Space between menu items */
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        
+        /* Move the nav links to the right */
+        margin-left: auto; 
+    }
+
+
     nav ul li{
       list-style: none;
       display: inline-block;
@@ -265,6 +278,37 @@
       transition: all ease 0.3s;
     }
 
+    #language-toggle {
+      background-color: transparent;
+      color: white;
+      border: none;
+      font-size: 20px; /* Match nav links */
+      font-weight: 800;
+      cursor: pointer;
+      padding: 0; /* Remove padding to match inline text */
+      display: flex;
+      align-items: center;
+      gap: 5px; /* Space between text and flags */
+    }
+
+    .lang-option {
+    cursor: pointer;
+    font-weight: 800;
+    color: white;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+    }
+
+    .lang-option.active {
+        font-weight: bold;
+        color: #088F8F;
+    }
+
+    .language-container {
+        display: flex;
+        align-items: center;
+        margin-left: 40px; /* Space between menu and language toggle */
+    }
+
   </style>
   <head>
     <!-- Favicon -->
@@ -284,6 +328,8 @@
                 <li><a href = "/Tech/">Tech</a></li>
                 <li><a href = "/News/">News</a></li>
                 <li><a href = "/Contact_us/">Contact us</a></li>
+                <div class="language-container"><button id="language-toggle"><span class="lang-option" data-lang="en">🇬🇧 English</span> | 
+                  <span class="lang-option" data-lang="zh">中文 🇨🇳</span></button></div>
             </ul>
 
             </nav>
@@ -302,9 +348,9 @@
               </div>
               
               <div class="blog-text">
-                <span>4 February 2025 / Football analytics</span>
+                <span>February 2025 / Football analytics</span>
                 <a href="/Tech/project_1/" class="blog-title">IntuitMaster(IM) - Penalty Expert</a>
-                <p>wae fwaefjkgh wfea eghkf ewhg gshadfh sdjfhsjgj  ajs a jjdja sd asd fssf sdf a ewew q asdasd h asdasd, ww werrrw e qrttrt</p>
+                <p>In football matches, penalties are a battle between the goal scorer and the goalkeeper. The outcome of each penalty kick can have a significant impact on the direction of the game, and a successful penalty kick shot can often boost a team's ranking in a major tournament. When defending a penalty kick, the goalkeeper makes a judgement call based on the body movement patterns of the shooter through experience from previous matches.</p>
                 <a href="/Tech/project_1/">Read More</a>
               </div>
 
@@ -313,14 +359,14 @@
             <div class="blog-box">
 
                 <div class="blog-img">
-                  <img src="/Tech/project_1/penalty_shot.png" alt="Blog">
+                  <img src="/Tech/project_2/Football_Board_1.png" alt="Blog">
                 </div>
   
                 <div class="blog-text">
-                  <span>8 February 2025 / Football analytics</span>
+                  <span>February 2025 / Football analytics</span>
                   <a href="/Tech/project_2/" class="blog-title">IntuitMaster(IM) - Decision Analyst</a>
-                  <p>wae fwaefjkgh wfea eghkf ewhg gshadfh sdjfhsjgj  ajs a jjdja sd asd fssf sdf a ewew q asdasd h asdasd, ww werrrw e qrttrt</p>
-                  <a href="/Tech/project_1/">Read More</a>
+                  <p>Decision Analyst scores each decision within a game and evaluates its impact on the game's direction. Both on and off-ball decisions are evaluated. Off-ball running is often overlooked compared to passing and dribbling, and can be very time consuming to analyse even if you want to, however, off-ball running is crucial for space utilisation and coverage, and affects the success of every attacking or defending play.</p>
+                  <a href="/Tech/project_2/">Read More</a>
                 </div>
   
             </div>
@@ -328,14 +374,14 @@
             <div class="blog-box">
 
               <div class="blog-img">
-                <img src="/Tech/project_1/penalty_shot.png" alt="Blog">
+                <img src="/Tech/project_3/pressure-thumbnail-cropped.png" alt="Blog">
               </div>
 
               <div class="blog-text">
-                <span>8 February 2025 / Football analytics</span>
-                <a href="/Tech/project_1/" class="blog-title">IntuitMaster(IM) - Pressure Quantifier</a>
-                <p>wae fwaefjkgh wfea eghkf ewhg gshadfh sdjfhsjgj  ajs a jjdja sd asd fssf sdf a ewew q asdasd h asdasd, ww werrrw e qrttrt</p>
-                <a href="/Tech/project_1/">Read More</a>
+                <span>February 2025 / Football analytics</span>
+                <a href="/Tech/project_3/" class="blog-title">IntuitMaster(IM) - Pressure Quantifier</a>
+                <p>Pressure Quantifier is the first pressure quantification model that gives an accurate quantification of how much pressure individual players and teams are under from their opponents.</p>
+                <a href="/Tech/project_3/">Read More</a>
               </div>
 
             </div>

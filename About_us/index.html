@@ -70,6 +70,19 @@
       margin: 0 10px 0 4px;
     }
 
+    nav ul {
+        display: flex;
+        align-items: center;
+        gap: 0px; /* Space between menu items */
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        
+        /* Move the nav links to the right */
+        margin-left: auto; 
+    }
+
+
     nav ul li{
       list-style: none;
       display: inline-block;
@@ -299,6 +312,37 @@
       }
     }
 
+    #language-toggle {
+      background-color: transparent;
+      color: white;
+      border: none;
+      font-size: 20px; /* Match nav links */
+      font-weight: 800;
+      cursor: pointer;
+      padding: 0; /* Remove padding to match inline text */
+      display: flex;
+      align-items: center;
+      gap: 5px; /* Space between text and flags */
+    }
+
+    .lang-option {
+    cursor: pointer;
+    font-weight: 800;
+    color: white;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+    }
+
+    .lang-option.active {
+        font-weight: bold;
+        color: #088F8F;
+    }
+
+    .language-container {
+        display: flex;
+        align-items: center;
+        margin-left: 40px; /* Space between menu and language toggle */
+    }
+
   </style>
   <head>
     <!-- Favicon -->
@@ -314,10 +358,12 @@
                 <a href="https://www.lboro.ac.uk/"><img src="/assets/images/loughborough-logo-black.png" class="uni_logo" alt="Uni Logo"></a>
               </div>
             <ul>
-                <li><a href = "/About_us/">About us</a></li>
-                <li><a href = "/Tech/">Tech</a></li>
-                <li><a href = "/News/">News</a></li>
-                <li><a href = "/Contact_us/">Contact us</a></li>
+                <li><a href = "/About_us/" id="nav_about">About us</a></li>
+                <li><a href = "/Tech/" id="nav_tech">Tech</a></li>
+                <li><a href = "/News/" id="nav_news">News</a></li>
+                <li><a href = "/Contact_us/" id="nav_contact">Contact us</a></li>
+                <div class="language-container"><button id="language-toggle"><span class="lang-option" data-lang="en">🇬🇧 English</span> | 
+                  <span class="lang-option" data-lang="zh">中文 🇨🇳</span></button></div>
             </ul>
 
             </nav>
@@ -329,8 +375,8 @@
                     <div class="main">
                         <img src="about_us_pic.png">
                         <div class="about-text">
-                            <h1>About Us</h1>
-                            <p>Game-Intuit is a Loughborough University Intellectual Property incubator featuring original AI sports analytics technology that helps athletes and teams analyse data and use AI models to optimise on-field performance. Our mission is to unlock the secrets behind winning for our customers through our state-of-the-art AI solutions.
+                            <h1 id="desc_title">About Us</h1>
+                            <p id="desc">Game-Intuit is a Loughborough University Intellectual Property incubator featuring original AI sports analytics technology that helps athletes and teams analyse data and use AI models to optimise on-field performance. Our mission is to unlock the secrets behind winning for our customers through our state-of-the-art AI solutions.
 
                                 Our products can be used either as a complement to existing competitive products, providing deeper AI technology support, or as standalone solutions for sports organisations looking to improve further. Our focus on AI decision analytics models bridges the gap between traditional sports analytics tools and enables seamless integration or full replacement depending on customer needs.
                                 
@@ -345,7 +391,7 @@
                     <div class="profile">
                       <img src="/assets/images/Aaron_pic.jpeg" class="profile-img">
 
-                      <h3 class="user-name">Dr Chaoyi Gu</h3>
+                      <h3 class="user-name" id="A_prof">Dr Chaoyi Gu</h3>
                       <h5>CEO</h5>
                       <p>
                         Dr Chaoyi Gu is one of the leading experts in football analytics. He received his PhD from Loughborough University, specialising in sports analytics and machine learning.
@@ -411,6 +457,7 @@
             </div>
         </footer>  
         
-      </div>    
+      </div>   
+  <script src="/assets/js/lang-toggle_about_us.js"></script>     
   </body>
 </html>

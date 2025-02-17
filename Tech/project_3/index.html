@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 | default: 'en' }}">
+  <title>Game-Intuit</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      background-color: #222;
+    }
+
+    .wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero{
+          width: 100%;
+          height: 100vh;
+          position: relative;
+          padding: 0 5%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+
+    nav{
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 20px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #222; /* take off if we want a transparent nav*/
+    }
+
+    .logo-container {
+      display: flex;  /* Aligns items horizontally */
+      align-items: center; /* Ensures vertical alignment */
+      gap: 10px; /* Adjust the spacing between logos */
+    }
+
+    nav .logo{
+      width: 47px;
+    }
+
+    nav .uni_logo{
+      width: 200px;
+    }
+
+    .logo-divider {
+      width: 2px; /* Thickness of the bar */
+      height: 45px; /* Adjust height as needed */
+      background-color: #E5E4E2; /* Black color */
+      margin: 0 10px 0 4px;
+    }
+
+    nav ul li{
+      list-style: none;
+      display: inline-block;
+      margin-left: 40px;
+    }
+
+    nav ul li a{
+      text-decoration: none;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1em;
+      transition: all .6s ease;
+    }
+
+    nav ul li a:hover{
+        color: #088F8F;
+    }
+
+    footer {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0); /* Semi-transparent black background */
+      color: #222;
+      text-align: center;
+      padding: 20px 8%;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      bottom: 0;
+      left: 0;
+      font-size: 16px;
+      margin-top: auto;
+      z-index: 10;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: transparent;
+    }
+
+    .footer-icons {
+      display: flex;
+      gap: 20px; /* Space between icons */
+      margin-bottom: 10px;
+    }
+
+    .footer-icons a {
+      color: #fff; /* Teal color for icons */
+      text-decoration: none;
+      font-size: 24px;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .footer-icons a:hover {
+      color: #fff; /* White on hover */
+      transform: scale(1.2); /* Slight zoom on hover */
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+      color: #aaa; /* Slightly lighter text */
+    }
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+    }
+
+    .content{
+        width: 80%;
+        margin: 100px auto 50px auto;
+        padding: 78px 0px;
+    }
+
+    .content h1{
+        color: white;
+        font-size: 35px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content h2{
+        color: white;
+        font-size: 30px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content p{
+        color: white;
+        letter-spacing: 1px;
+        line-height: 28px;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .content ul{
+        color: white;
+        letter-spacing: 1px;
+        line-height: 28px;
+        font-size: 18px;
+        margin-bottom: 45px;
+        margin-left: 20px;
+    }
+
+  </style>
+  <head>
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/logo_1_noTransp.png" type="image/png">
+  </head>
+  <body>
+      <div class="container"> 
+        
+            <nav>
+              <div class="logo-container">
+                <a href="/"><img src="/assets/images/logo_1_noTransp.png" class="logo" alt="Game-Intuit Logo"></a>
+                <div class="logo-divider"></div>
+                <a href="https://www.lboro.ac.uk/"><img src="/assets/images/loughborough-logo-black.png" class="uni_logo" alt="Uni Logo"></a>
+              </div>
+            <ul>
+                <li><a href = "/About_us/">About us</a></li>
+                <li><a href = "/Tech/">Tech</a></li>
+                <li><a href = "/News/">News</a></li>
+                <li><a href = "/Contact_us/">Contact us</a></li>
+            </ul>
+
+            </nav>
+                    
+        <div class="content">    
+          <h1>IntuitMaster(IM) -&nbsp;<span style="color: #088F8F;"> Pressure Quantifier</span></h1>
+            <p style="margin-bottom: 45px;"><span style="color: #088F8F;"> Pressure Quantifier</span> is the first pressure quantification model that gives an accurate quantification of how much pressure individual players and teams are under from their opponents.
+                In a football match, pressure plays a vital role in both <span style="color: #088F8F;"> attack</span> and <span style="color: #088F8F;"> defence</span>.
+                In <span style="color: #088F8F;"> defence</span>, effective pressure can force the opponent to lose the ball.
+                In <span style="color: #088F8F;"> attack</span>, the ability to make the proper decisions and break the pressure often determines whether or not the opponent's goal can be threatened in that turn.</p>          
+            
+            <div style="display: flex; justify-content: center; align-items: center; gap: 100px; margin-bottom: 45px;">
+                <figure style="text-align: center;">
+                    <img style="display: block; margin: 0 auto; width: 500px; height: auto; border-radius: 15px;" src="sloan-framework.drawio.png">
+                    <figcaption style="margin-top: 8px; font-size: 14px; color: #aaa;">Individual player pressure</figcaption>
+                </figure>
+                <figure style="text-align: center;">
+                    <img style="display: block; margin: 0 auto; width: 590px; height: auto; border-radius: 15px;" src="Possession_Pressure_Prove.png">
+                    <figcaption style="margin-top: 8px; font-size: 14px; color: #aaa;">Team pressure</figcaption>
+                </figure>
+            </div>
+                
+        
+            <p>With the help of the <span style="color: #088F8F;"> Pressure Quantifier</span>, you can:</p>
+            <ul>
+                <li><span style="color: #088F8F;">Improve team performance</span>: analyse whether the team's decisions in attack are effective in defusing pressure, and whether the team's movements in defence are effective in putting pressure on the opponent.</li>
+                <li><span style="color: #088F8F;">Player training</span>: train players to make the right decisions under pressure; train players to make the right moves in defence to put pressure on the opponent.</li>
+                <li><span style="color: #088F8F;">Player scoring</span>: quickly identifying players from transfer targets or youth teams who are skilled in dealing with pressure.</li>
+                
+            </ul>
+        </div>
+            
+        <footer>
+            <div class="footer-container">
+            <div class="footer-icons">
+                <a href="https://www.instagram.com/game_intuit2025/"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:Aaron@gameintuit.com"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2025 Game-Intuit Web Development</p>
+            </div>
+        </footer>  
+        
+      </div>    
+  </body>
+</html>

@@ -47,6 +47,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      background: #222; /* take off if we want a transparent nav*/
     }
 
     .logo-container {
@@ -155,14 +156,36 @@
         font-size: 35px;
         text-transform: capitalize;
         margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content h2{
+        color: white;
+        font-size: 30px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .content p{
-        color: #aaa;
+        color: white;
+        letter-spacing: 1px;
+        line-height: 28px;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .content ul{
+        color: white;
         letter-spacing: 1px;
         line-height: 28px;
         font-size: 18px;
         margin-bottom: 45px;
+        margin-left: 20px;
     }
 
   </style>
@@ -187,10 +210,17 @@
             </ul>
 
             </nav>
-                    
         <div class="content">    
-          <h1></h1>
+          <h1>IntuitMaster(IM) -&nbsp;<span style="color: #088F8F;"> Penalty Expert</span></h1>
+            <p style="margin-bottom: 45px;">In football matches, penalties are a battle between the goal scorer and the goalkeeper. The outcome of each penalty kick can have a significant impact on the direction of the game, and a successful penalty kick shot can often boost a team's ranking in a major tournament. When defending a penalty kick, the goalkeeper makes a judgement call based on the body movement patterns of the shooter through experience from previous matches.
 
+              <span style="color: #088F8F;"> Penalty Expert</span> uses AI algorithms to extract and analyse the movement of the shooter from a large amount of data to help the goalkeeper make the best judgement.</p>          
+              <img style="display: block; margin: 0 auto; max-width: 33%; height: auto; border-radius: 15px; margin-bottom: 45px;" src="penalty_shot.png">
+            <p><span style="color: #088F8F;"> Penalty Expert</span> predicts the direction of a penalty kicker's shot before he touches the ball.</p>
+            <ul>
+                <li><span style="color: #088F8F;">Improve saving success</span>: understand your opponent's body movement patterns.</li>
+                <li><span style="color: #088F8F;">Improve penalty success</span>: train shooters with AI goalkeepers.</li>
+            </ul>
         </div>
             
         <footer>
