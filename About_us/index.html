@@ -39,7 +39,7 @@
       }
 
     nav{
-      width: 100%;
+      width: calc(100% - 15px);
       position: absolute;
       top: 0;
       left: 0;
@@ -47,6 +47,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      z-index: 1000;
     }
 
     .logo-container {
@@ -386,14 +387,14 @@
                 </section>
             </div>  
             <div class="slides slide2">    
-                <h1 class="heading">Meet Our Team</h1>
+                <h1 class="heading" id="mot">Meet Our Team</h1>
                   <div class="profiles">
                     <div class="profile">
                       <img src="/assets/images/Aaron_pic.jpeg" class="profile-img">
 
                       <h3 class="user-name" id="A_prof">Dr Chaoyi Gu</h3>
                       <h5>CEO</h5>
-                      <p>
+                      <p id="A_desc">
                         Dr Chaoyi Gu is one of the leading experts in football analytics. He received his PhD from Loughborough University, specialising in sports analytics and machine learning.
                         
                         His research has been published in top journals and conferences in Artificial Intelligence and sports, including Knowledge-Based Systems and Sloan Sports Analytics Conference.</p>
@@ -402,9 +403,9 @@
                     <div class="profile">
                       <img src="/assets/images/jiaming.JPG" class="profile-img">
 
-                      <h3 class="user-name">Jiaming Na</h3>
+                      <h3 class="user-name" id="J_prof">Jiaming Na</h3>
                       <h5>CTO</h5>
-                      <p>
+                      <p id="J_desc">
                         Jiaming Na specialises in computer vision model development and optimisation.
                         
                         He joined Loughborough University London after receiving his BSc and MSc in Statistics from Imperial College London. During his PhD, he developed several AI frameworks to advance football performance analysis.</p>
@@ -413,9 +414,9 @@
                     <div class="profile">
                       <img src="/assets/images/Varuna_pic.jpeg" class="profile-img">
 
-                      <h3 class="user-name">Dr Varuna De Silva</h3>
+                      <h3 class="user-name" id="V_prof">Dr Varuna De Silva</h3>
                       <h5>CSO</h5>
-                      <p>
+                      <p id="V_desc">
                         One of the UK's foremost experts on artificial intelligence, he currently leads the Machine Intelligence Lab at Loughborough University.
                         
                         He is an Associate Editor of IEEE Access, a Fellow of the Higher Education Academy in the UK, and a member of the BCS and IET. He also serves as Head of Research for Artificial Intelligence and Digital Technologies at the UK Parliament.</p>
@@ -424,9 +425,9 @@
                     <div class="profile">
                       <img src="/assets/images/Leonardo.jpeg" class="profile-img">
 
-                      <h3 class="user-name">Leonardo Pina</h3>
+                      <h3 class="user-name" id="L_prof">Leonardo Pina</h3>
                       <h5>Software Engineer</h5>
-                      <p>
+                      <p id="L_desc">
                         Leonardo received his BSc in Information Engineering from the University of Coimbra, Portugal, in 2023 and his MSc in Artificial Intelligence from Brunel University London, UK, in 2024, where he was awarded the Dean's Prize for Innovation and Impact.
                         
                         He has applied diffusion modelling and natural language processing techniques in several computer vision tasks.</p>
@@ -435,9 +436,9 @@
                     <div class="profile">
                       <img src="/assets/images/Rafael.jpeg" class="profile-img">
 
-                      <h3 class="user-name">Dr Rafael Pina</h3>
+                      <h3 class="user-name" id="R_prof">Dr Rafael Pina</h3>
                       <h5>AI Scientist</h5>
-                      <p>
+                      <p id="R_desc">
                         Rafael holds a PhD in Artificial Intelligence from Loughborough University, London. He is currently a postdoctoral fellow at Loughborough University and teaches AI courses.
                         He has published papers in numerous AI summits and topical journals.
                         
@@ -451,7 +452,7 @@
             <div class="footer-icons">
                 <a href="https://www.instagram.com/game_intuit2025/"><i class="fab fa-instagram"></i></a>
                 <a href="mailto:Aaron@gameintuit.com"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/company/game-intuit-ltd/"><i class="fab fa-linkedin"></i></a>
             </div>
             <p>&copy; 2025 Game-Intuit Web Development</p>
             </div>

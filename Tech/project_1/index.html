@@ -39,7 +39,7 @@
       }
 
     nav{
-      width: 100%;
+      width: calc(100% - 15px);
       position: absolute;
       top: 0;
       left: 0;
@@ -48,6 +48,7 @@
       align-items: center;
       justify-content: space-between;
       background: #222; /* take off if we want a transparent nav*/
+      z-index: 1000;
     }
 
     .logo-container {
@@ -70,6 +71,19 @@
       background-color: #E5E4E2; /* Black color */
       margin: 0 10px 0 4px;
     }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        gap: 0px; /* Space between menu items */
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        
+        /* Move the nav links to the right */
+        margin-left: auto; 
+    }
+
 
     nav ul li{
       list-style: none;
@@ -188,6 +202,37 @@
         margin-left: 20px;
     }
 
+    #language-toggle {
+      background-color: transparent;
+      color: white;
+      border: none;
+      font-size: 20px; /* Match nav links */
+      font-weight: 800;
+      cursor: pointer;
+      padding: 0; /* Remove padding to match inline text */
+      display: flex;
+      align-items: center;
+      gap: 5px; /* Space between text and flags */
+    }
+
+    .lang-option {
+    cursor: pointer;
+    font-weight: 800;
+    color: white;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+    }
+
+    .lang-option.active {
+        font-weight: bold;
+        color: #088F8F;
+    }
+
+    .language-container {
+        display: flex;
+        align-items: center;
+        margin-left: 40px; /* Space between menu and language toggle */
+    }
+
   </style>
   <head>
     <!-- Favicon -->
@@ -203,23 +248,25 @@
                 <a href="https://www.lboro.ac.uk/"><img src="/assets/images/loughborough-logo-black.png" class="uni_logo" alt="Uni Logo"></a>
               </div>
             <ul>
-                <li><a href = "/About_us/">About us</a></li>
-                <li><a href = "/Tech/">Tech</a></li>
-                <li><a href = "/News/">News</a></li>
-                <li><a href = "/Contact_us/">Contact us</a></li>
+              <li><a href = "/About_us/" id="nav_about">About us</a></li>
+              <li><a href = "/Tech/" id="nav_tech">Tech</a></li>
+              <li><a href = "/News/" id="nav_news">News</a></li>
+              <li><a href = "/Contact_us/" id="nav_contact">Contact us</a></li>
+              <div class="language-container"><button id="language-toggle"><span class="lang-option" data-lang="en">🇬🇧 English</span> | 
+                <span class="lang-option" data-lang="zh">中文 🇨🇳</span></button></div>
             </ul>
 
             </nav>
         <div class="content">    
           <h1>IntuitMaster(IM) -&nbsp;<span style="color: #088F8F;"> Penalty Expert</span></h1>
-            <p style="margin-bottom: 45px;">In football matches, penalties are a battle between the goal scorer and the goalkeeper. The outcome of each penalty kick can have a significant impact on the direction of the game, and a successful penalty kick shot can often boost a team's ranking in a major tournament. When defending a penalty kick, the goalkeeper makes a judgement call based on the body movement patterns of the shooter through experience from previous matches.
+            <p style="margin-bottom: 45px;" id="main_text">In football matches, penalties are a battle between the goal scorer and the goalkeeper. The outcome of each penalty kick can have a significant impact on the direction of the game, and a successful penalty kick shot can often boost a team's ranking in a major tournament. When defending a penalty kick, the goalkeeper makes a judgement call based on the body movement patterns of the shooter through experience from previous matches.
 
               <span style="color: #088F8F;"> Penalty Expert</span> uses AI algorithms to extract and analyse the movement of the shooter from a large amount of data to help the goalkeeper make the best judgement.</p>          
               <img style="display: block; margin: 0 auto; max-width: 33%; height: auto; border-radius: 15px; margin-bottom: 45px;" src="penalty_shot.png">
-            <p><span style="color: #088F8F;"> Penalty Expert</span> predicts the direction of a penalty kicker's shot before he touches the ball.</p>
+            <p id="sub_text"><span style="color: #088F8F;"> Penalty Expert</span> predicts the direction of a penalty kicker's shot before he touches the ball.</p>
             <ul>
-                <li><span style="color: #088F8F;">Improve saving success</span>: understand your opponent's body movement patterns.</li>
-                <li><span style="color: #088F8F;">Improve penalty success</span>: train shooters with AI goalkeepers.</li>
+                <li id="bul_p_1"><span style="color: #088F8F;">Improve saving success</span>: understand your opponent's body movement patterns.</li>
+                <li id="bul_p_2"><span style="color: #088F8F;">Improve penalty success</span>: train shooters with AI goalkeepers.</li>
             </ul>
         </div>
             
@@ -228,12 +275,13 @@
             <div class="footer-icons">
                 <a href="https://www.instagram.com/game_intuit2025/"><i class="fab fa-instagram"></i></a>
                 <a href="mailto:Aaron@gameintuit.com"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/company/game-intuit-ltd/"><i class="fab fa-linkedin"></i></a>
             </div>
             <p>&copy; 2025 Game-Intuit Web Development</p>
             </div>
         </footer>  
         
-      </div>    
+      </div> 
+    <script src="/assets/js/lang-toggle_tech_1.js"></script>          
   </body>
 </html>

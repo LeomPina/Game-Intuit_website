@@ -39,7 +39,7 @@
       }
 
     nav{
-      width: 100%;
+      width: calc(100% - 15px);
       position: absolute;
       top: 0;
       left: 0;
@@ -47,6 +47,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      background: #222; /* take off if we want a transparent nav*/
+      z-index: 1000;
     }
 
     .logo-container {
@@ -69,6 +71,19 @@
       background-color: #E5E4E2; /* Black color */
       margin: 0 10px 0 4px;
     }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        gap: 0px; /* Space between menu items */
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        
+        /* Move the nav links to the right */
+        margin-left: auto; 
+    }
+
 
     nav ul li{
       list-style: none;
@@ -155,14 +170,48 @@
         font-size: 35px;
         text-transform: capitalize;
         margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .content p{
-        color: #aaa;
+        color: white;
         letter-spacing: 1px;
         line-height: 28px;
         font-size: 18px;
-        margin-bottom: 45px;
+        margin-bottom: 20px;
+    }
+
+    #language-toggle {
+      background-color: transparent;
+      color: white;
+      border: none;
+      font-size: 20px; /* Match nav links */
+      font-weight: 800;
+      cursor: pointer;
+      padding: 0; /* Remove padding to match inline text */
+      display: flex;
+      align-items: center;
+      gap: 5px; /* Space between text and flags */
+    }
+
+    .lang-option {
+    cursor: pointer;
+    font-weight: 800;
+    color: white;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+    }
+
+    .lang-option.active {
+        font-weight: bold;
+        color: #088F8F;
+    }
+
+    .language-container {
+        display: flex;
+        align-items: center;
+        margin-left: 40px; /* Space between menu and language toggle */
     }
 
   </style>
@@ -180,16 +229,24 @@
                 <a href="https://www.lboro.ac.uk/"><img src="/assets/images/loughborough-logo-black.png" class="uni_logo" alt="Uni Logo"></a>
               </div>
             <ul>
-                <li><a href = "/About_us/">About us</a></li>
-                <li><a href = "/Tech/">Tech</a></li>
-                <li><a href = "/News/">News</a></li>
-                <li><a href = "/Contact_us/">Contact us</a></li>
+              <li><a href = "/About_us/" id="nav_about">About us</a></li>
+              <li><a href = "/Tech/" id="nav_tech">Tech</a></li>
+              <li><a href = "/News/" id="nav_news">News</a></li>
+              <li><a href = "/Contact_us/" id="nav_contact">Contact us</a></li>
+              <div class="language-container"><button id="language-toggle"><span class="lang-option" data-lang="en">🇬🇧 English</span> | 
+                <span class="lang-option" data-lang="zh">中文 🇨🇳</span></button></div>
             </ul>
 
             </nav>
                     
         <div class="content">    
-            
+          <h1 id="title">🌟 Exciting News! 🌟</h1>
+          <p id="main_text">We're thrilled to announce the launch of <span style="color: #088F8F;"> GAME-INTUIT LTD</span>, co-founded by Dr. Aaron Gu, Jamie Na, and Dr. Varuna De Silva.
+            <span style="color: #088F8F;"> GAME-INTUIT LTD</span> is Loughborough University's first Spinout dedicated to applying AI in sports analytics, coming from the world's No. 1 institute for sports.
+            Game-Intuit will pioneer the use of Machine Learning to evaluate athletes' decision-making.
+            This achievement is the result of contributions from several exceptionally noteworthy individuals: Ben Smith, Professor Mike Caine, James Skinner, Ahmet Kondoz, and Raphael Brandon, who have been with us on this journey for a long time.
+            We’re also incredibly grateful for the support we've received from Peter Collier, Pete Hitchings, Nick Gostick, and Bhavna Patel.
+            We can't wait to embark on this exciting journey with <span style="color: #088F8F;"> GAME-INTUIT LTD</span>, driving innovation and making a lasting impact. 🚀</p>
 
         </div>
             
@@ -198,12 +255,13 @@
             <div class="footer-icons">
                 <a href="https://www.instagram.com/game_intuit2025/"><i class="fab fa-instagram"></i></a>
                 <a href="mailto:Aaron@gameintuit.com"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/company/game-intuit-ltd/"><i class="fab fa-linkedin"></i></a>
             </div>
             <p>&copy; 2025 Game-Intuit Web Development</p>
             </div>
         </footer>  
         
-      </div>    
+      </div>  
+    <script src="/assets/js/lang-toggle_update_1.js"></script>     
   </body>
 </html>

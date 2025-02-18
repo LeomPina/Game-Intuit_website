@@ -39,7 +39,7 @@
       }
 
     nav{
-      width: 100%;
+      width: calc(100% - 15px);
       position: absolute;
       top: 0;
       left: 0;
@@ -47,6 +47,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      background: #222; /* take off if we want a transparent nav*/
+      z-index: 1000;
     }
 
     .logo-container {
@@ -324,20 +326,20 @@
                 <a href="https://www.lboro.ac.uk/"><img src="/assets/images/loughborough-logo-black.png" class="uni_logo" alt="Uni Logo"></a>
               </div>
             <ul>
-                <li><a href = "/About_us/">About us</a></li>
-                <li><a href = "/Tech/">Tech</a></li>
-                <li><a href = "/News/">News</a></li>
-                <li><a href = "/Contact_us/">Contact us</a></li>
-                <div class="language-container"><button id="language-toggle"><span class="lang-option" data-lang="en">🇬🇧 English</span> | 
-                  <span class="lang-option" data-lang="zh">中文 🇨🇳</span></button></div>
+              <li><a href = "/About_us/" id="nav_about">About us</a></li>
+              <li><a href = "/Tech/" id="nav_tech">Tech</a></li>
+              <li><a href = "/News/" id="nav_news">News</a></li>
+              <li><a href = "/Contact_us/" id="nav_contact">Contact us</a></li>
+              <div class="language-container"><button id="language-toggle"><span class="lang-option" data-lang="en">🇬🇧 English</span> | 
+                <span class="lang-option" data-lang="zh">中文 🇨🇳</span></button></div>
             </ul>
 
             </nav>
         <div class="content">
           
           <div class="blog">           
-            <h1>Our Projects</h1>
-            <p>Here you can find what we have been working on, as well as more info about the technology used in each project</p>
+            <h1 id="title">Our Projects</h1>
+            <p id="sub_title">Here you can find what we have been working on, as well as more info about the technology used in each project</p>
           </div> 
 
           <div class="blog-container">
@@ -348,10 +350,10 @@
               </div>
               
               <div class="blog-text">
-                <span>February 2025 / Football analytics</span>
+                <span id="date_1">February 2025 / Football analytics</span>
                 <a href="/Tech/project_1/" class="blog-title">IntuitMaster(IM) - Penalty Expert</a>
-                <p>In football matches, penalties are a battle between the goal scorer and the goalkeeper. The outcome of each penalty kick can have a significant impact on the direction of the game, and a successful penalty kick shot can often boost a team's ranking in a major tournament. When defending a penalty kick, the goalkeeper makes a judgement call based on the body movement patterns of the shooter through experience from previous matches.</p>
-                <a href="/Tech/project_1/">Read More</a>
+                <p id="tech_1">In football matches, penalties are a battle between the goal scorer and the goalkeeper. The outcome of each penalty kick can have a significant impact on the direction of the game, and a successful penalty kick shot can often boost a team's ranking in a major tournament. When defending a penalty kick, the goalkeeper makes a judgement call based on the body movement patterns of the shooter through experience from previous matches.</p>
+                <a href="/Tech/project_1/" id="rm_1">Read More</a>
               </div>
 
             </div>
@@ -363,10 +365,10 @@
                 </div>
   
                 <div class="blog-text">
-                  <span>February 2025 / Football analytics</span>
+                  <span id="date_2">February 2025 / Football analytics</span>
                   <a href="/Tech/project_2/" class="blog-title">IntuitMaster(IM) - Decision Analyst</a>
-                  <p>Decision Analyst scores each decision within a game and evaluates its impact on the game's direction. Both on and off-ball decisions are evaluated. Off-ball running is often overlooked compared to passing and dribbling, and can be very time consuming to analyse even if you want to, however, off-ball running is crucial for space utilisation and coverage, and affects the success of every attacking or defending play.</p>
-                  <a href="/Tech/project_2/">Read More</a>
+                  <p id="tech_2">Decision Analyst scores each decision within a game and evaluates its impact on the game's direction. Both on and off-ball decisions are evaluated. Off-ball running is often overlooked compared to passing and dribbling, and can be very time consuming to analyse even if you want to, however, off-ball running is crucial for space utilisation and coverage, and affects the success of every attacking or defending play.</p>
+                  <a href="/Tech/project_2/" id="rm_2">Read More</a>
                 </div>
   
             </div>
@@ -378,10 +380,10 @@
               </div>
 
               <div class="blog-text">
-                <span>February 2025 / Football analytics</span>
+                <span id="date_3">February 2025 / Football analytics</span>
                 <a href="/Tech/project_3/" class="blog-title">IntuitMaster(IM) - Pressure Quantifier</a>
-                <p>Pressure Quantifier is the first pressure quantification model that gives an accurate quantification of how much pressure individual players and teams are under from their opponents.</p>
-                <a href="/Tech/project_3/">Read More</a>
+                <p id="tech_3">Pressure Quantifier is the first pressure quantification model that gives an accurate quantification of how much pressure individual players and teams are under from their opponents.</p>
+                <a href="/Tech/project_3/" id="rm_3">Read More</a>
               </div>
 
             </div>
@@ -394,12 +396,13 @@
             <div class="footer-icons">
                 <a href="https://www.instagram.com/game_intuit2025/"><i class="fab fa-instagram"></i></a>
                 <a href="mailto:Aaron@gameintuit.com"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/company/game-intuit-ltd/"><i class="fab fa-linkedin"></i></a>
             </div>
             <p>&copy; 2025 Game-Intuit Web Development</p>
             </div>
         </footer>  
         
-      </div>    
+      </div>  
+  <script src="/assets/js/lang-toggle_tech.js"></script>       
   </body>
 </html>

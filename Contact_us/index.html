@@ -39,14 +39,16 @@
       }
 
     nav{
-      width: 100%;
-      position: absolute;
+      width: calc(100% - 15px);
+      position: fixed;
       top: 0;
       left: 0;
       padding: 20px 8%;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      background: #222; /* take off if we want a transparent nav*/
+      z-index: 1000;
     }
 
     .logo-container {
@@ -69,6 +71,19 @@
       background-color: #E5E4E2; /* Black color */
       margin: 0 10px 0 4px;
     }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        gap: 0px; /* Space between menu items */
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        
+        /* Move the nav links to the right */
+        margin-left: auto; 
+    }
+
 
     nav ul li{
       list-style: none;
@@ -224,7 +239,7 @@
         color: #008080;
     }
 
-    button{
+    .send-btn {
         background: #008080;
         width: 100px;
         border: none;
@@ -255,6 +270,37 @@
         padding-top: 20px;
     }
 
+    #language-toggle {
+      background-color: transparent;
+      color: white;
+      border: none;
+      font-size: 20px; /* Match nav links */
+      font-weight: 800;
+      cursor: pointer;
+      padding: 0; /* Remove padding to match inline text */
+      display: flex;
+      align-items: center;
+      gap: 5px; /* Space between text and flags */
+    }
+
+    .lang-option {
+    cursor: pointer;
+    font-weight: 800;
+    color: white;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+    }
+
+    .lang-option.active {
+        font-weight: bold;
+        color: #088F8F;
+    }
+
+    .language-container {
+        display: flex;
+        align-items: center;
+        margin-left: 40px; /* Space between menu and language toggle */
+    }
+
   </style>
   <head>
     <!-- Favicon -->
@@ -270,56 +316,58 @@
                 <a href="https://www.lboro.ac.uk/"><img src="/assets/images/loughborough-logo-black.png" class="uni_logo" alt="Uni Logo"></a>
               </div>
             <ul>
-                <li><a href = "/About_us/">About us</a></li>
-                <li><a href = "/Tech/">Tech</a></li>
-                <li><a href = "/News/">News</a></li>
-                <li><a href = "/Contact_us/">Contact us</a></li>
+              <li><a href = "/About_us/" id="nav_about">About us</a></li>
+              <li><a href = "/Tech/" id="nav_tech">Tech</a></li>
+              <li><a href = "/News/" id="nav_news">News</a></li>
+              <li><a href = "/Contact_us/" id="nav_contact">Contact us</a></li>
+              <div class="language-container"><button id="language-toggle"><span class="lang-option" data-lang="en">🇬🇧 English</span> | 
+                <span class="lang-option" data-lang="zh">中文 🇨🇳</span></button></div>
             </ul>
 
             </nav>
                     
         <div class="content">    
-            <h1>Connect With Us</h1>
-            <p>You can contact us by writing to us at the email address below</p>
+            <h1 id="title">Connect With Us</h1>
+            <p id="sub_title">You can contact us by writing to us at the email address below</p>
             <div class="contact-box">
                 <div class="contact-left">
-                    <h3>Send your request</h3>
+                    <h3 id="send_r">Send your request</h3>
                     <form accept-charset="UTF-8" action="https://formkeep.com/f/exampletoken" method="POST">
                         <div class="input-row">
                             <div class="input-group">
-                                <label>Name</label>
+                                <label id="name">Name</label>
                                 <input type="text">
                             </div>
                             <div class="input-group">
-                                <label>Phone</label>
+                                <label id="phone">Phone</label>
                                 <input type="text">
                             </div>
                         </div>
                         <div class="input-row">
                             <div class="input-group">
-                                <label>Email</label>
+                                <label id="email">Email</label>
                                 <input type="email">
                             </div>
                             <div class="input-group">
-                                <label>Subject</label>
+                                <label id="subject">Subject</label>
                                 <input type="text">
                             </div>
                         </div>
-                        <label>Message</label>
-                        <textarea rows="5" placeholder="Your Message"></textarea>
-                        <button type="submit">SEND</button>
+                        <label id="message">Message</label>
+                        <textarea id="y_message" rows="5" placeholder="Your Message"></textarea>
+                        <button class="send-btn" type="submit" id="send">SEND</button>
                     </form>    
                 </div>
                 
                 <div class="contact-right">
-                    <h3>Reach Us</h3>
+                    <h3 id="reach_us">Reach Us</h3>
                     <table>
                         <tr>
-                            <td>Email</td>
+                            <td id="email2">Email</td>
                             <td>Aaron@gameintuit.com</td>
                         </tr>
                         <tr>
-                            <td>Address</td>
+                            <td id="address">Address</td>
                             <td>Here East, Queen Elizabeth Olympic Park, Plexal, London E15 2GW</td>
                         </tr>
                     </table>
@@ -333,12 +381,13 @@
             <div class="footer-icons">
                 <a href="https://www.instagram.com/game_intuit2025/"><i class="fab fa-instagram"></i></a>
                 <a href="mailto:Aaron@gameintuit.com"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/company/game-intuit-ltd/"><i class="fab fa-linkedin"></i></a>
             </div>
             <p>&copy; 2025 Game-Intuit Web Development</p>
             </div>
         </footer>  
         
-      </div>    
+      </div>   
+    <script src="/assets/js/lang-toggle_contact_us.js"></script>    
   </body>
 </html>
