@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ site.locale | slice: 0,2 | default: 'en' }}">
+  <meta charset="UTF-8">
   <title>Game-Intuit</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -320,8 +321,8 @@
               <li><a href = "/Tech/" id="nav_tech">Tech</a></li>
               <li><a href = "/News/" id="nav_news">News</a></li>
               <li><a href = "/Contact_us/" id="nav_contact">Contact us</a></li>
-              <div class="language-container"><button id="language-toggle"><span class="lang-option" data-lang="en">🇬🇧 English</span> | 
-                <span class="lang-option" data-lang="zh">中文 🇨🇳</span></button></div>
+              <div class="language-container"><button id="language-toggle"><span class="lang-option" data-lang="en">🇬🇧</span> | 
+                <span class="lang-option" data-lang="zh">🇨🇳</span></button></div>
             </ul>
 
             </nav>
@@ -332,29 +333,28 @@
             <div class="contact-box">
                 <div class="contact-left">
                     <h3 id="send_r">Send your request</h3>
-                    <form accept-charset="UTF-8" action="https://formkeep.com/f/exampletoken" method="POST">
+                    <form action="https://formkeep.com/f/67df11df8a61"
+                          accept-charset="UTF-8"
+                          enctype="multipart/form-data"
+                          method="POST">
                         <div class="input-row">
                             <div class="input-group">
-                                <label id="name">Name</label>
-                                <input type="text">
+                                <label for="Name" id="name">Name</label>
+                                <input type="text" name="Name" required>
                             </div>
                             <div class="input-group">
-                                <label id="phone">Phone</label>
-                                <input type="text">
+                                <label for="Phone" id="phone">Phone</label>
+                                <input type="text" name="Phone" required>
                             </div>
                         </div>
                         <div class="input-row">
                             <div class="input-group">
-                                <label id="email">Email</label>
-                                <input type="email">
-                            </div>
-                            <div class="input-group">
-                                <label id="subject">Subject</label>
-                                <input type="text">
+                                <label for="Email" id="email">Email</label>
+                                <input type="email" name="Email" required>
                             </div>
                         </div>
-                        <label id="message">Message</label>
-                        <textarea id="y_message" rows="5" placeholder="Your Message"></textarea>
+                        <label for="Message" id="message">Message</label>
+                        <textarea name="Message" id="y_message" rows="5" placeholder="Your Message" required></textarea>
                         <button class="send-btn" type="submit" id="send">SEND</button>
                     </form>    
                 </div>

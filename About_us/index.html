@@ -1,13 +1,17 @@
 <!doctype html>
 <html lang="{{ site.locale | slice: 0,2 | default: 'en' }}">
+  <meta charset="UTF-8">
   <title>Game-Intuit</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <style>
     html, body {
+      width: 100%;
       height: 100%;
       margin: 0;
       overflow-y: auto;
+      padding: 0;
+      overflow-x: hidden;
       display: flex;
       flex-direction: column;
       background-color: #222;
@@ -17,7 +21,10 @@
       flex: 1;
       display: flex;
       flex-direction: column;
+      width: 100%;
       height: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
 
@@ -47,6 +54,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      background: #222; /* take off if we want a transparent nav*/
       z-index: 1000;
     }
 
@@ -153,18 +161,20 @@
 
     .about{
         width: 100%;
-        padding: 78px 0px;
+        padding: 5vw 0;
         background-color: #222;
     }
 
-    .about-text{
-        width: 550px;
-
+    .about-text {
+        width: 50vw; /* Uses viewport width for adaptability */
+        max-width: 600px; /* Prevents text from being too wide on large screens */
     }
 
-    .about img{
+    .about img {
+        width: 100%;
         height: auto;
-        width: 500px;
+        max-width: 400px; /* Restricts max image size */
+        border-radius: 15px;
     }
 
     .main{
@@ -174,21 +184,22 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+        flex-wrap: wrap; /* Allows wrapping for smaller screens */
     }
 
-    .about-text h1{
+    .about-text h1 {
         color: white;
-        font-size: 80px;
+        font-size: clamp(2rem, 5vw, 4rem); /* Scales based on screen size */
         text-transform: capitalize;
-        margin-bottom: 20px;
+        margin-bottom: 1rem;
     }
 
-    .about-text p{
+    .about-text p {
         color: white;
-        letter-spacing: 1px;
-        line-height: 28px;
-        font-size: 18px;
-        margin-bottom: 45px;
+        letter-spacing: 0.05rem;
+        line-height: 1.6;
+        font-size: clamp(1rem, 1.5vw, 1.125rem);
+        margin-bottom: 2rem;
     }
 
     .container{
@@ -200,13 +211,13 @@
 
     .slides{
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 50px;
+        gap: 3vw;
         color: #fff;
-        scroll-snap-align: start;
+        scroll-snap-align: start;/*this is causing the scroll issue*/
         
     }
 
@@ -214,19 +225,53 @@
         background: linear-gradient(454deg, #222, #222);
     }
 
-    .slide2{
+
+
+    .slide2 {
         background: linear-gradient(454deg, #222222, #222222);
-        display: flex;
-        flex-direction: column; /* Ensures vertical stacking */
-        align-items: center; /* Centers content horizontally */
-        justify-content: center; /* Centers content vertically */
-        padding: 50px 0; /* Adds spacing */
+        display: block; /* Change from flex to block to allow normal flow */
+        padding: 10vh 5vw 10vh;
+        width: 100%;
+        min-height: 100vh;
+        overflow-y: auto; 
+        box-sizing: border-box;
+        scroll-behavior: smooth; /* Smooth scrolling */
     }
 
-    .heading{
-      font-size: 60px;
-      color: white;
+    .slide2::after {
+        content: "";
+        display: block;
+        height: 10vh;  /* Adjust the height to create enough extra space */
     }
+
+
+    /* Responsive Adjustments */
+    @media (max-width: 1200px) {
+        .slide2 {
+            padding: 4vh 2vw;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .slide2 {
+            padding: 3vh 5vw;
+            justify-content: flex-start; /* Aligns content to top for smaller screens */
+        }
+    }
+
+    @media (max-width: 600px) {
+        .slide2 {
+            padding: 2vh 5vw;
+        }
+    }
+
+    .heading {
+        font-size: 60px;
+        color: white;
+        margin-top: 2vh;  /* Adjust this value as needed */
+        text-align: center;
+    }
+
 
     .heading span{
       font-style: italic;
@@ -237,6 +282,7 @@
         display: flex;
         justify-content: space-around; /* Centers the profiles */
         flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        gap: 40px; /* Consistent spacing */
         margin: 20px 80px;
     }
 
@@ -264,7 +310,7 @@
     .profile h5{
       font-size: 20px;
       font-weight: 100;
-      letter-spacing: 3px;
+      letter-spacing: 1px;
       color: #ccc;
       text-align: center;
     }
@@ -293,10 +339,11 @@
       }
     }
 
-    @media only screen and (max-width: 900px){
+    @media only screen and (max-width: 970px){
       .heading {
-        font-size: 40px;
+        font-size: 60px;
         color: white;
+        margin-top: 2vh;  /* Adjust this value as needed */
         text-align: center;
       }
 
@@ -312,6 +359,7 @@
         margin: 20px 10px 80px 10px;
       }
     }
+
 
     #language-toggle {
       background-color: transparent;
@@ -363,8 +411,8 @@
                 <li><a href = "/Tech/" id="nav_tech">Tech</a></li>
                 <li><a href = "/News/" id="nav_news">News</a></li>
                 <li><a href = "/Contact_us/" id="nav_contact">Contact us</a></li>
-                <div class="language-container"><button id="language-toggle"><span class="lang-option" data-lang="en">🇬🇧 English</span> | 
-                  <span class="lang-option" data-lang="zh">中文 🇨🇳</span></button></div>
+                <div class="language-container"><button id="language-toggle"><span class="lang-option" data-lang="en">🇬🇧</span> | 
+                  <span class="lang-option" data-lang="zh">🇨🇳</span></button></div>
             </ul>
 
             </nav>
@@ -417,9 +465,7 @@
                       <h3 class="user-name" id="V_prof">Dr Varuna De Silva</h3>
                       <h5>CSO</h5>
                       <p id="V_desc">
-                        One of the UK's foremost experts on artificial intelligence, he currently leads the Machine Intelligence Lab at Loughborough University.
-                        
-                        He is an Associate Editor of IEEE Access, a Fellow of the Higher Education Academy in the UK, and a member of the BCS and IET. He also serves as Head of Research for Artificial Intelligence and Digital Technologies at the UK Parliament.</p>
+                        One of the UK's leading AI experts, he directs Loughborough University's Machine Intelligence Lab and heads AI and digital technologies research at the UK Parliament. He is IEEE Access Associate Editor, a Higher Education Academy Fellow, and a member of BCS and IET.</p>
                     </div>
 
                     <div class="profile">

@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("name").textContent = data[lang].name;
                 document.getElementById("phone").textContent = data[lang].phone;
                 document.getElementById("email").textContent = data[lang].email;
-                document.getElementById("subject").textContent = data[lang].subject;
                 document.getElementById("message").textContent = data[lang].message;
                 document.getElementById("email2").textContent = data[lang].email2;
                 document.getElementById("address").textContent = data[lang].address;

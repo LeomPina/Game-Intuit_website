@@ -12,7 +12,7 @@
     "J_prof": "Jiaming Na",
     "J_desc": "Jiaming Na specialises in computer vision model development and optimisation. He joined Loughborough University London after receiving his BSc and MSc in Statistics from Imperial College London. During his PhD, he developed several AI frameworks to advance football performance analysis.",
     "V_prof": "Dr Varuna De Silva",
-    "V_desc": "One of the UK's foremost experts on artificial intelligence, he currently leads the Machine Intelligence Lab at Loughborough University. He is an Associate Editor of IEEE Access, a Fellow of the Higher Education Academy in the UK, and a member of the BCS and IET. He also serves as Head of Research for Artificial Intelligence and Digital Technologies at the UK Parliament.",
+    "V_desc": "One of the UK's leading AI experts, he directs Loughborough University's Machine Intelligence Lab and heads AI and digital technologies research at the UK Parliament. He is IEEE Access Associate Editor, a Higher Education Academy Fellow, and a member of BCS and IET.",
     "L_prof": "Leonardo Pina",
     "L_desc": "Leonardo received his BSc in Information Engineering from the University of Coimbra, Portugal, in 2023 and his MSc in Artificial Intelligence from Brunel University London, UK, in 2024, where he was awarded the Dean's Prize for Innovation and Impact. He has applied diffusion modelling and natural language processing techniques in several computer vision tasks.",
     "R_prof": "Dr Rafael Pina",
